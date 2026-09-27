@@ -75,12 +75,15 @@ class HomePage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start, // Konten rata kiri
                 children: [
                   // Foto hewan - mengisi bagian atas card berbentuk persegi
+                  // Menggunakan parameter ?auto=compress&w=400 untuk memuat gambar ukuran kecil
+                  // agar tidak lag saat loading banyak gambar beresolusi tinggi
                   Expanded(
                     child: SizedBox(
                       width: double.infinity, // Lebar penuh
                       child: Image.network(
-                        animal.image, // URL gambar hewan dari data
+                        '${animal.image}?auto=compress&w=400', // URL gambar dengan resize agar ringan
                         fit: BoxFit.cover, // Gambar memenuhi area tanpa distorsi
+                        cacheWidth: 400, // Membatasi cache gambar di memori agar hemat RAM
                         // Placeholder saat gambar loading
                         loadingBuilder: (context, child, loadingProgress) {
                           if (loadingProgress == null) return child;
