@@ -1,5 +1,42 @@
 // import "..."
 
+// Class User untuk menyimpan data login
+class User {
+  String username;
+  String password;
+  String nama;
+
+  User({required this.username, required this.password, required this.nama});
+}
+
+// Data login - username menggunakan NIM, password menggunakan nama prodi
+User user1 = User(
+  username: '124240127', // NIM sebagai username
+  password: 'sistem informasi', // Nama prodi sebagai password
+  nama: 'Aqil', // Nama user
+);
+
+// Class Animal untuk menyimpan data hewan
+class Animal {
+  String name;
+  String type;
+  double weight;
+  List<String> habitat;
+  int height;
+  List<String> activities;
+  String image;
+
+  Animal({
+    required this.name,
+    required this.type,
+    required this.weight,
+    required this.habitat,
+    required this.height,
+    required this.activities,
+    required this.image,
+  });
+}
+
 List<Animal> dummyAnimals = [
   Animal(
     name: "Bengal Tiger",
