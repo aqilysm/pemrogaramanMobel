@@ -87,8 +87,8 @@ class _LoginPageState extends State<LoginPage> {
         centerTitle: true, // Judul di tengah
       ),
 
-      // Background halaman warna krem
-      backgroundColor: const Color(0xFFFFF8E1), // Warna krem
+      // Background halaman warna broken white
+      backgroundColor: const Color(0xFFFAFAFA), // Warna broken white
 
       // Body halaman login
       body: Center(
@@ -121,7 +121,7 @@ class _LoginPageState extends State<LoginPage> {
               TextField(
                 controller: _usernameController, // Menghubungkan controller ke TextField
                 decoration: InputDecoration(
-                  labelText: 'Username (NIM)', // Label petunjuk input
+                  labelText: 'Username', // Label petunjuk input
                   prefixIcon: const Icon(Icons.person), // Icon di depan field
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(12), // Sudut rounded pada border
@@ -137,7 +137,7 @@ class _LoginPageState extends State<LoginPage> {
                 controller: _passwordController, // Menghubungkan controller ke TextField
                 obscureText: _obscurePassword, // Menyembunyikan teks password
                 decoration: InputDecoration(
-                  labelText: 'Password (Nama Prodi)', // Label petunjuk input
+                  labelText: 'Password', // Label petunjuk input
                   prefixIcon: const Icon(Icons.lock), // Icon gembok di depan field
                   // Tombol untuk toggle visibility password
                   suffixIcon: IconButton(
